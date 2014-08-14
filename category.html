@@ -1,0 +1,19 @@
+---
+layout: default
+title: カテゴリ一覧
+---
+
+<h2>カテゴリ一覧</h2>
+<ul>
+{% for category in site.categories %}
+  <li>
+    {% assign name = category[0] %}
+    [<a href="#{{ category[0] }}" title="{{ category[0] }}" id="{{ category[0] }}">{{ category[0] }}</a>] ({{ site.categories[name] | size }})
+    <ul>
+      {% for page in site.categories[name] %}
+      <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a> (<time>{{ page.date }}</time>)</li>
+      {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>

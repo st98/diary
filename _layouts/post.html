@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<h2>{% for category in page.categories %}[<a href="{{ site.baseurl }}/category.html#{{ category }}" title="{{ category }}">{{ category }}</a>]{% endfor %} <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+(最終更新日時: <time>{{ page.date }}</time>)
+{{ content }}
