@@ -9,16 +9,6 @@ body {
   font-family: 'Source Code Pro', Consolas, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 }
 
-::selection {
-  color: #fff;
-  background: #000;
-}
-
-::-moz-selection {
-  color: #fff;
-  background: #000;
-}
-
 h1, h2, h3, h4 {
   margin: 1em 0;
   font-weight: 400;
@@ -95,4 +85,18 @@ small {
   margin: 2em 0;
   font-size: medium;
   text-align: center;
+}
+
+::selection {
+  color: #fff;
+  background: #000;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #000;
+}
+
+:target {
+  font-weight: bolder;
 }
