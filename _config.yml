@@ -4,7 +4,7 @@ title: st98 の日記帳
 encoding: utf-8
 
 permalink: /posts/:year-:month-:day-:title.html
-# timezone: Asia/Tokyo
+timezone: Asia/Tokyo
 
 exclude: ['Gemfile', 'Gemfile.lock']
 
