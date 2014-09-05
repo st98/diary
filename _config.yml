@@ -6,7 +6,7 @@ encoding: utf-8
 permalink: /posts/:year-:month-:day-:title.html
 timezone: Asia/Tokyo
 
-exclude: ['Gemfile', 'Gemfile.lock']
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile']
 
 defaults:
   -
