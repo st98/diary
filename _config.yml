@@ -20,4 +20,3 @@ redcarpet:
   extensions: ['fenced_code_blocks', 'no_intra_emphasis', 'space_after_headers']
 
 highlighter: pygments
-# highlighter: rouge
