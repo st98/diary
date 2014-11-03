@@ -12,6 +12,6 @@ layout: default
 <h2><a href="{{ site.baseurl }}/archive.html" title="記事一覧">記事一覧</a></h2>
 <ul>
 {% for page in site.posts %}
-<li>{% for category in page.categories %}[<a href="{{ site.baseurl }}/category.html#{{ category }}" title="{{ category }}">{{ category }}</a>]{% endfor %} <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a> (<time>{{ page.date }}</time>)</li>
+<li>{% for category in page.categories %}[<a href="{{ site.baseurl }}/category.html#{{ category }}" title="{{ category }}">{{ category }}</a>]{% endfor %} <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a> (<time>{{ page.date | date: '%Y-%m-%d' }}</time>)</li>
 {% endfor %}
 </ul>

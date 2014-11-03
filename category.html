@@ -11,7 +11,7 @@ title: カテゴリ一覧
     [<a href="#{{ category[0] }}" title="{{ category[0] }}" id="{{ category[0] }}">{{ category[0] }}</a>] ({{ site.categories[name] | size }})
     <ul>
       {% for page in site.categories[name] %}
-      <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a> (<time>{{ page.date }}</time>)</li>
+      <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a> (<time>{{ page.date | date: '%Y-%m-%d' }}</time>)</li>
       {% endfor %}
     </ul>
   </li>
