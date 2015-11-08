@@ -126,13 +126,13 @@ for x in s:
   if x == '+':
     a, b = stack.pop(), stack.pop()
     stack.append(a + b)
-  elif x == '+':
+  elif x == '-':
     a, b = stack.pop(), stack.pop()
     stack.append(b - a)
-  elif x == '+':
+  elif x == '*':
     a, b = stack.pop(), stack.pop()
     stack.append(a * b)
-  elif x == '+':
+  elif x == '/':
     a, b = stack.pop(), stack.pop()
     stack.append(b / a)
   else:
