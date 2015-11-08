@@ -16,7 +16,7 @@ date: 2015-11-08 23:20:00 +0900
 - Find from binary (binary 100)
 - Guess the flag (binary 200)
 - Easy decrypto (crypto 100)
-- Simple decrypto (crypto 100)
+- Simple crypto (crypto 100)
 - Access to restricted url (network 100)
 - National flag (programming 100)
 - RPN (programming 200)
@@ -77,7 +77,7 @@ Congraturations!
 flag: SECCON{XOR_encryption_message}
 ```
 
-## Easy decrypto (crypto 100) / Simple decrypto (crypto 100)
+## Easy decrypto (crypto 100) / Simple crypto (crypto 100)
 それぞれ ROT13 か base64 でエンコードされていたので、デコードするとフラッグ (もしくはヒント) が出てきました。
 
 ```
