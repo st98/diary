@@ -175,7 +175,7 @@ while j < 31337:
     s.append(i)
     j += 1
   i += 1
-print 'SECCON{%d}' % (sum(s[12345-1:31337]))
+print 'SECCON{' + str(sum(s[12345-1:31337])) + '}'
 ```
 
 ```
