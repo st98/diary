@@ -217,3 +217,160 @@ SECCON{1234567890}
 ```
 SECCON{42576}
 ```
+
+## 終わってから解けた問題
+### [Binary 100] sl is not ls
+ELF ファイルですが、私の環境だとそのまま実行すると `Error opening terminal: xterm-256color.` というようなエラーが出て怒られるだけでした。
+
+`strace ./sl` を実行してみると、どうやら `/home/user/.terminfo/x/xterm-256color` や `/usr/share/terminfo/x/xterm-256color` が存在しないためにコケているとわかります。
+
+ならばと `TERM='xterm-color' ./sl` で実行してみると動きました
+
+この方法で `./sl -h` を実行すると、以下のような結果になりました。
+
+```
+Try `./sl [-h] [OPTIONS]' for more information.
+                OPTIONS: -[alFS]
+```
+
+`./sl -S` を実行するとフラグが表示されました。
+
+```
+SECCON{SL_l0v3}
+```
+
+---
+
+### [Binary 300] fakeransom
+exe ファイル (binary300.exe) と、この exe ファイルを使って暗号化されたファイルが渡されます。
+
+`strings` にバイナリを投げてみると `CryptAcquireContextW` や `CryptEncrypt` のような文字列があり、CryptoAPI を使って暗号化を行っているのではと推測できます。
+
+特に重要な処理をしていそうなところを中心に `IDA` (Free 版) でバイナリを調べていきましょう。暗号化の準備をしていると思われる部分 (`0x40EFF0` ~)、暗号化をしていると思われる部分 (`0x40D6B0` ~) から読んでいきます。
+
+暗号化の準備をしていると思われる部分を読みます。まずいくつかの変数の初期化が行われているようですが、以下のような気になる部分がありました。覚えておきましょう。
+
+```
+mov    BYTE PTR [ebp-0x78],0x4c
+mov    BYTE PTR [ebp-0x77],0x57
+mov    BYTE PTR [ebp-0x76],0x4a
+mov    BYTE PTR [ebp-0x75],0x50
+mov    BYTE PTR [ebp-0x74],0x5e
+...
+mov    BYTE PTR [ebp-0x3e],0xe
+mov    BYTE PTR [ebp-0x3d],0xc
+mov    BYTE PTR [ebp-0x3c],0x15
+mov    BYTE PTR [ebp-0x3b],0xb
+mov    BYTE PTR [ebp-0x3a],0xc
+```
+
+その後、いくつか関数を呼んでいます。定数をググったり、C っぽくして読みやすくしてみます。
+
+```c
+CryptAcquireContextW(&hProv, 0, 0, PROV_RSA_FULL, 0);
+CryptCreateHash(hProv, CALG_SHA1, 0, 0, &hHash);
+CryptHashData(hHash, &kininaru, 0x3f, 0);
+CryptDeriveKey(hProv, CALG_RC4, hHash, 0, &hKey);
+```
+
+先ほど気になると言っていた変数は `kininaru` としていますが、使われている関数について調べてみるとどうやらこれは暗号化に使うパスワードだったようです。`pass.bin` として保存しておきましょう。
+
+暗号化をしていると思われる部分を読みます。長くて面倒なので `CryptEncrypt` を読んでいる部分だけ読みやすくしてみます。
+
+```c
+CryptEncrypt(hKey, 0, 1, 0, pbData, &pdwDataLen, dwBufLen);
+```
+
+`pbData` は暗号化するデータのようです。特に変わったことはしていません。
+
+では、得られた情報から復号するプログラムを書きましょう。
+
+```c
+#include <windows.h>
+#include <wincrypt.h>
+
+#define PASSWORD_LENGTH 0x3f
+
+int main() {
+	HCRYPTPROV hProv;
+	HCRYPTKEY hKey;
+	HCRYPTHASH hHash;
+	CHAR sPassword[PASSWORD_LENGTH] = "";
+	CHAR sBuffer[256] = "";
+	HANDLE hFile;
+	DWORD dwBufferLen;
+	DWORD dwReadByte;
+
+	hFile = CreateFile("flag.txt.rsec", GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	dwBufferLen = GetFileSize(hFile, NULL);
+	ReadFile(hFile, sBuffer, dwBufferLen, &dwReadByte, NULL);
+	CloseHandle(hFile);
+
+	hFile = CreateFile("pass.bin", GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	ReadFile(hFile, sPassword, PASSWORD_LENGTH, &dwReadByte, NULL);
+	CloseHandle(hFile);
+
+	CryptAcquireContext(&hProv, NULL, NULL, PROV_RSA_FULL, 0);
+	CryptCreateHash(hProv, CALG_SHA1, 0, 0, &hHash);
+	CryptHashData(hHash, sPassword, PASSWORD_LENGTH, 0);
+	CryptDeriveKey(hProv, CALG_RC4, hHash, 0, &hKey);
+
+	CryptDecrypt(hKey, 0, TRUE, 0, sBuffer, &dwBufferLen);
+	MessageBox(NULL, sBuffer, "FLAG", MB_OK);
+
+	CryptDestroyKey(hKey);
+	CryptReleaseContext(hProv, 0);
+
+	return 0;
+}
+```
+
+`gcc decrypt.c -o decrypt.exe -mwindows` のような感じでコンパイルして実行すると、フラグが表示されました。
+
+```
+SECCON{DATA_DECRYPTED_FROM_FAKE_RANSOMWARE}
+```
+
+---
+
+本番では暗号化されたファイルを復号するプログラムを書き始めるところまで進められたのですが、WinAPI が全く分からず、いろいろ調べているうちに時間切れでした。
+
+時間内に解けず惜しい思いをしましたが、面白い問題でした。
+
+### [Network 200] sample
+pcap ファイルが渡されます。Wireshark で開いてみると ping のエコー要求とエコー応答を何度も行っている様子をキャプチャしていることが分かります。
+
+TTL を見てみるとエコー応答の方は 64 のみなのに対し、エコー要求の方は 61, 80, 66 のように不自然な値になっています。
+
+試しにエコー要求の TTL を集めてみます。
+
+```python
+from scapy.all import *
+pcap = rdpcap('sample.pcap')
+
+r = ''
+for k, p in enumerate(pcap):
+  if k % 2 == 1: continue
+  r += chr(p.ttl)
+
+print r
+```
+
+`===PB@@LKxMfkdFpKlDllaz` という結果でした。`PB@@LK` と `SECCON` とを比べてみると、TTL に仕込まれていた文字列は、本来の文字列から 3 足されているのではと分かります。やってみます。
+
+```python
+s = '===PB@@LKxMfkdFpKlDllaz'
+print ''.join(chr(ord(c) - 3) for c in s)
+```
+
+フラグが出ました。
+
+```
+SECCON{PingIsNoGood}
+```
+
+---
+
+本番では、私は TTL を集めるところまでしか解けませんでした。
+
+正直に言うと、これは面白くない問題でした。知識や経験があれば TTL がおかしいと気づけるとは思いますが、その次の段階は解くには手がかりが少なすぎるのではないかと思います。
