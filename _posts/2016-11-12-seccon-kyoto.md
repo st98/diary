@@ -244,7 +244,7 @@ SECCON{SL_l0v3}
 本番では実行できずに終わりでした。なぜ実行できないか探ってみるべきでした。
 
 ### [Binary 300] fakeransom
-exe ファイル (binary300.exe) と、この exe ファイルを使って暗号化されたファイルが渡されます。
+exe ファイル (`binary300.exe`) と、この exe ファイルを使って暗号化されたファイル (`flag.txt.rsec`) が渡されます。
 
 `strings` にバイナリを投げてみると `CryptAcquireContextW` や `CryptEncrypt` のような文字列があり、CryptoAPI を使って暗号化を行っているのではと推測できます。
 
@@ -338,6 +338,20 @@ SECCON{DATA_DECRYPTED_FROM_FAKE_RANSOMWARE}
 本番では暗号化されたファイルを復号するプログラムを書き始めるところまで進められたのですが、WinAPI が全く分からず、いろいろ調べているうちに時間切れでした。
 
 時間内に解けず惜しい思いをしましたが、面白い問題でした。
+
+---
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/_N4NU_">@_N4NU_</a> あーなるほどです…って思ったんですが、そもそも暗号化のアルゴリズムがRC4なのでCryptDecryptに変える必要すらなくてただ動かすだけでいいですね…</p>&mdash; st98 (@st98_) <a href="https://twitter.com/st98_/status/797963802826244097">2016年11月14日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+こういうことを考えたんですが、
+
+- 適当なフォルダを作る
+- `binary300.exe` と `flag.txt.rsec` を作ったフォルダにコピー
+- 作ったフォルダに移動して `flag.txt.rsec` を `flag.txt` にリネーム
+- `binary300.exe` を実行
+
+という手順で簡単にフラグが出てきます。
 
 ### [Network 200] sample
 pcap ファイルが渡されます。Wireshark で開いてみると ping のエコー要求とエコー応答を何度も行っている様子をキャプチャしていることが分かります。
