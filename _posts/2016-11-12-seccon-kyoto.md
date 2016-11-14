@@ -372,11 +372,11 @@ for k, p in enumerate(pcap):
 print r
 ```
 
-`===PB@@LKxMfkdFpKlDllaz` という結果でした。`PB@@LK` と `SECCON` とを比べてみると、TTL に仕込まれていた文字列は、本来の文字列から 3 足されているのではと分かります。やってみます。
+`===PB@@LKxMfkdFpKlDllaz` という結果でした。`PB@@LK` と `SECCON` とを比べてみると、TTL に仕込まれていた文字列は、本来の文字列から 3 引かれているのではと分かります。やってみます。
 
 ```python
 s = '===PB@@LKxMfkdFpKlDllaz'
-print ''.join(chr(ord(c) - 3) for c in s)
+print ''.join(chr(ord(c) + 3) for c in s)
 ```
 
 フラグが出ました。
