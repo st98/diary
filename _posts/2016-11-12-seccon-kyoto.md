@@ -17,7 +17,7 @@ SECCON{Cyber_Koshien}
 ```
 
 ### [Binary 100] Assembler Tanka
-問題文紛失。アセンブラ短歌を実行しろという問題でした。`0x53454343` (SECC) のような数値が見えたので集めてデコードするとフラグが出てきました。
+問題文紛失。アセンブラ短歌を実行しろという問題でした。`0x43434553` (SECC) のような数値が見えたので集めてデコードするとフラグが出てきました。
 
 ```
 SECCON{57577}
@@ -105,7 +105,7 @@ SECCON{HidesecretIm4g3}
 ### [Network 100] gettheflag
 与えられた pcap を見ると、`/flag.php` に `n=0` を POST して JSON が返ってくる、というのを何度も繰り返している様子が確認できます。
 
-どうやら `n=0` でフラグの 1 文字目が返ってくるようですが、`{"result":"success","data":{"char":".","last":false}}` のような JSON も返ってきているのが確認できます。
+どうやら `n=0` で `{"result":"success","data":{"char":"S","last":true}}` のような形でフラグの 1 文字目が返ってくるようですが、`{"result":"success","data":{"char":".","last":false}}` のような JSON も返ってきているのが確認できます。
 
 `"last":true` になっている文字が本来のフラグの一部のようなので、これだけ `strings gettheflag.pcap | grep true` で集めるとフラグが出てきました。
 
@@ -132,7 +132,7 @@ SECCON{bsdbanner}
 ```
 
 ### [Programming 100] x2.txt
-2 倍。
+与えられた文字列は文字コードが 2 倍にされているようです。戻しましょう。
 
 ```python
 s = open('x2.txt', 'r').read()
@@ -224,7 +224,7 @@ ELF ファイルですが、私の環境だとそのまま実行すると `Error
 
 `strace ./sl` を実行してみると、どうやら `/home/user/.terminfo/x/xterm-256color` や `/usr/share/terminfo/x/xterm-256color` が存在しないためにコケているとわかります。
 
-ならばと `TERM='xterm-color' ./sl` で実行してみると動きました
+ならばと `TERM='xterm-color' ./sl` で実行してみると動きました。
 
 この方法で `./sl -h` を実行すると、以下のような結果になりました。
 
@@ -277,7 +277,7 @@ CryptDeriveKey(hProv, CALG_RC4, hHash, 0, &hKey);
 
 先ほど気になると言っていた変数は `kininaru` としていますが、使われている関数について調べてみるとどうやらこれは暗号化に使うパスワードだったようです。`pass.bin` として保存しておきましょう。
 
-暗号化をしていると思われる部分を読みます。長くて面倒なので `CryptEncrypt` を読んでいる部分だけ読みやすくしてみます。
+暗号化をしていると思われる部分を読みます。長くて面倒なので `CryptEncrypt` を呼んでいる部分だけ読みやすくしてみます。
 
 ```c
 CryptEncrypt(hKey, 0, 1, 0, pbData, &pdwDataLen, dwBufLen);
@@ -346,9 +346,9 @@ SECCON{DATA_DECRYPTED_FROM_FAKE_RANSOMWARE}
 
 こういうことを考えたんですが、
 
-- 適当なフォルダを作る
+- 適当なフォルダを作って移動
 - `binary300.exe` と `flag.txt.rsec` を作ったフォルダにコピー
-- 作ったフォルダに移動して `flag.txt.rsec` を `flag.txt` にリネーム
+- `flag.txt.rsec` を `flag.txt` にリネーム
 - `binary300.exe` を実行
 
 という手順で簡単にフラグが出てきます。
@@ -372,7 +372,7 @@ for k, p in enumerate(pcap):
 print r
 ```
 
-`===PB@@LKxMfkdFpKlDllaz` という結果でした。`PB@@LK` と `SECCON` とを比べてみると、TTL に仕込まれていた文字列は、本来の文字列から 3 引かれているのではと分かります。やってみます。
+`===PB@@LKxMfkdFpKlDllaz` という結果でした。`PB@@LK` と `SECCON` とを比べてみると、TTL に仕込まれていた文字列は、文字コードが本来の文字列から 3 引かれているのではと分かります。やってみます。
 
 ```python
 s = '===PB@@LKxMfkdFpKlDllaz'
