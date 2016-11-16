@@ -72,6 +72,8 @@ code, .highlight {
 
 code {
   padding: .2em .5em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .highlight {
