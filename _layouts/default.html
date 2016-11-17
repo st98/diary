@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    {% include meta.html %}
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/highlight.css">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
@@ -10,6 +9,6 @@
   <body>
     <h1><a href="{{ site.baseurl }}/" title="{{ site.title }}">{{ site.title }}</a></h1>
     {{ content }}
-    <small>&copy; 2013- <a href="/" title="st98.github.io">st98</a></small>
+    <small><a href="//st98.github.io" title="st98.github.io">st98.github.io</a> / <a href="{{ site.baseurl }}/" title="{{ site.title }}">{{ site.title }}</a></small>
   </body>
 </html>
