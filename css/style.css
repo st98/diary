@@ -86,6 +86,10 @@ div.highlighter-rouge {
   padding: 0;
 }
 
+div#disqus_thread {
+  margin: 2em 0;
+}
+
 time {
   color: #888;
 }
