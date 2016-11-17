@@ -1,5 +1,8 @@
 baseurl: /diary
+author: st98
 title: st98 の日記帳
+description: st98 の日記帳です。
+production_url: https://st98.github.io
 
 encoding: utf-8
 
@@ -15,8 +18,9 @@ defaults:
     values:
       layout: default
 
-markdown: redcarpet
-redcarpet:
-  extensions: ['fenced_code_blocks', 'no_intra_emphasis', 'space_after_headers']
-
-highlighter: rouge
+markdown: kramdown
+kramdown: 
+  input: GFM
+  auto_ids: true
+  hard_wrap: true
+  syntax_highlighter: rouge

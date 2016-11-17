@@ -190,6 +190,7 @@ flag: SECCON{kuronuri_chuui}
 ```
 
 ## 終わってから解けた (?) 問題
+
 ### Where is the flag (binary 300)
 WpfApplication2.exe という exe ファイルが渡されました。
 

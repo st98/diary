@@ -9,6 +9,7 @@ crane さん ([@crane_memory](https://twitter.com/crane_memory)) と一緒にチ
 最終的にチームで 2410 点を獲得し、チーム順位は 2 位 (10 チーム中) でした。
 
 ## 競技時間中に私が解いた問題
+
 ### [Sample 10] TRY FIRST
 フラグ提出のテスト。問題文に書かれているフラグを投げるだけでした。
 
@@ -219,6 +220,7 @@ SECCON{42576}
 ```
 
 ## 終わってから解けた問題
+
 ### [Binary 100] sl is not ls
 ELF ファイルですが、私の環境だとそのまま実行すると `Error opening terminal: xterm-256color.` というようなエラーが出て怒られるだけでした。
 
