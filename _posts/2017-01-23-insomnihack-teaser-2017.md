@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Insomni'hack teaser 2017のwrite-up
+title: Insomni'hack teaser 2017 の write-up
 categories: [ctf]
 date: 2017-01-23 22:06:00 +0900
 ---
