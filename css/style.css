@@ -61,6 +61,7 @@ a:hover img {
 img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 @media (max-width: 40em) {
