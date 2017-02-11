@@ -2,6 +2,7 @@
 layout: post
 title: Hackcon Mini の write-up
 categories: [ctf]
+date: 2017-02-12 05:30:00 +0900
 ---
 
 チーム Harekaze で [Hackcon Mini](http://hackcon.in/) に参加しました。
