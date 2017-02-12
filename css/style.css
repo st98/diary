@@ -71,6 +71,16 @@ img {
   }
 }
 
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: .5em;
+  border-bottom: 1px solid #a6a6a6;
+}
+
 pre {
   white-space: pre-wrap;
 }
