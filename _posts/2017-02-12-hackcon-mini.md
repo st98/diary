@@ -112,7 +112,7 @@ print(s)
 モールス信号が出てきました。これをデコードするとフラグが出てきました。Web とは…。
 
 ```
-`HACKCONMORSEFLAG`
+HACKCONMORSEFLAG
 ```
 
 ## [Web 60] Admin Login
@@ -157,7 +157,7 @@ while True:
 結果は `bpqaqabpmwzqoqvitntioGMAAAAABPMnTiOQaippipilpplpl` でした。これを右に 8 シフトさせて md5 にかけたものがフラグです。
 
 ```
-`9418ba5c569b70839474e121a7a72d58`
+9418ba5c569b70839474e121a7a72d58
 ```
 
 ## 感想
