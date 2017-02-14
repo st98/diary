@@ -7,7 +7,7 @@ date: 2017-02-14 18:30:00 +0900
 
 チーム Harekaze で [BSides San Francisco CTF](https://bsidessf.com/ctf.html) に参加しました。
 
-最終的にチームで 3837 点を獲得し、順位は 18 位 (得点 531 チーム中) でした。うち、私は 19 問を解いて 2234 点を入れました。
+最終的にチームで 3837 点を獲得し、順位は 18 位 (得点 531 チーム中) でした。うち、私は 20 問を解いて 2384 点を入れました。
 
 以下、解いた問題の write-up です。
 
@@ -233,6 +233,61 @@ The key is: FLAG:18ee7c71d2794f546ca23e6858de0bc6
 
 ```
 FLAG:18ee7c71d2794f546ca23e6858de0bc6
+```
+
+## [Reversing 150] Pinlock
+
+与えられた apk ファイルを展開すると、`assets/pinlock.db` というファイルがありました。まずこの DB の内容を調べましょう。
+
+```
+sqlite> select sql from sqlite_master;
+CREATE TABLE `android_metadata` (
+        `locale`        TEXT DEFAULT 'en_US'
+)
+CREATE TABLE `pinDB` (
+        `_id`   INTEGER,
+        `pin`   TEXT,
+        PRIMARY KEY(`_id`)
+)
+CREATE TABLE `secretsDBv1` (
+        `_id`   INTEGER,
+        `entry` TEXT,
+        PRIMARY KEY(`_id`)
+)
+CREATE TABLE `secretsDBv2` (
+        `__id`  INTEGER,
+        `entry` TEXT,
+        PRIMARY KEY(`__id`)
+)
+sqlite> select * from pinDB;
+1|d8531a519b3d4dfebece0259f90b466a23efc57b
+sqlite> select * from secretsDBv1;
+1|hcsvUnln5jMdw3GeI4o/txB5vaEf1PFAnKQ3kPsRW2o5rR0a1JE54d0BLkzXPtqB
+sqlite> select * from secretsDBv2;
+1|Bi528nDlNBcX9BcCC+ZqGQo1Oz01+GOWSmvxRj7jg1g=
+```
+
+d8531a519b3d4dfebece0259f90b466a23efc57b でググると、これは 7498 の sha1 ハッシュということが分かります。
+
+classes.dex を展開してデコンパイルすると、使われていないソルトがあること、secretsDBv2 はどこからも参照されていないことが分かります。
+
+あとは手に入れた PIN コード、使われていないソルト、secretsDBv2 の暗号文を使って復号するだけです。
+
+```python
+import hashlib
+from Crypto.Cipher import AES
+
+pin = '7498'
+encrypted = 'Bi528nDlNBcX9BcCC+ZqGQo1Oz01+GOWSmvxRj7jg1g='.decode('base64')
+salt = 'SampleSalt'
+
+key = hashlib.pbkdf2_hmac('sha1', pin, salt, 1000, 16)
+cipher = AES.new(key, AES.MODE_ECB)
+print repr(cipher.decrypt(encrypted))
+```
+
+```
+﻿⁠⁠⁠⁠Flag:OnlyAsStrongAsWeakestLink
 ```
 
 ## [Web 20] Zumbo 1
