@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SECCON 京都大会 (サイバー甲子園) に参加しました
-categories: [ctf]
+categories: [ctf, seccon]
 date: 2016-11-12 22:44:00 +0900
 ---
 

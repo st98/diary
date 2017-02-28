@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SECCON 福島大会 (サイバー甲子園) に参加しました
-categories: [ctf]
+categories: [ctf, seccon]
 date: 2015-11-08 23:20:00 +0900
 ---
 
