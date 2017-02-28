@@ -15,33 +15,23 @@ Hirota Sora としてひとりで [NeverLAN CTF 2017](https://neverlanctf.com/) 
 
 暗号に関するクイズでした。
 
-```
-This Shifty Cipher is one of the simplest, and most well know ciphers.
-```
+> This Shifty Cipher is one of the simplest, and most well know ciphers.
 
 `caesar`
 
-```
-This Cipher is is named after the person who made it famous, not but the man who first created it.
-```
+> This Cipher is is named after the person who made it famous, not but the man who first created it.
 
 `vigenere`
 
-```
-This transposition cipher was used by the warriors in the famous movie "the 300"
-```
+> This transposition cipher was used by the warriors in the famous movie "the 300"
 
 `scytale`
 
-```
-The first recorded use of this cipher was used to hide a book of magic.
-```
+> The first recorded use of this cipher was used to hide a book of magic.
 
 `steganography`
 
-```
-This world famous cipher was invented by Arthur Scherbius
-```
+> This world famous cipher was invented by Arthur Scherbius
 
 `enigma machine`
 
@@ -472,9 +462,7 @@ c34s3r_c1ph3r_70_7h3_m4x
 
 ### Encoding Apprentice (50)
 
-```
-What common encoding practice’s title contains the square of 8 and occasionally ends with an “=”, or “==”?
-```
+> What common encoding practice’s title contains the square of 8 and occasionally ends with an “=”, or “==”?
 
 ```
 base64
@@ -482,9 +470,7 @@ base64
 
 ### Shifty Ciphers… (50)
 
-```
-What cipher is the shiftiest of them all? He even has his own salad…
-```
+> What cipher is the shiftiest of them all? He even has his own salad…
 
 ```
 caesar
@@ -492,9 +478,7 @@ caesar
 
 ### Know your extensions (50)
 
-```
-Unix and Linux use this (instead of a file extension) to determine what format a file is.
-```
+> Unix and Linux use this (instead of a file extension) to determine what format a file is.
 
 ```
 magic numbers
@@ -502,9 +486,7 @@ magic numbers
 
 ### Mmmm... SSL (50)
 
-```
-What is the standard, secure, size of an ssl certificate?
-```
+> What is the standard, secure, size of an ssl certificate?
 
 ```
 2048
@@ -512,9 +494,7 @@ What is the standard, secure, size of an ssl certificate?
 
 ### Don't eat me (50)
 
-```
-I allow HTTP to act as a stateful protocol instead of the stateless protocol it actually is. Just a small piece of data sent from a website...
-```
+> I allow HTTP to act as a stateful protocol instead of the stateless protocol it actually is. Just a small piece of data sent from a website...
 
 ```
 cookie
