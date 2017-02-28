@@ -7,6 +7,8 @@ body {
   margin: 1em auto;
   line-height: 2.0;
   font-family: 'Source Code Pro', Consolas, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 h1, h2, h3, h4 {
