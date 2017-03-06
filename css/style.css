@@ -31,7 +31,6 @@ dd {
 }
 
 hr {
-  width: 75%;
   margin: 2em auto;
   border: 0;
   border-top: 2px dotted #a6a6a6;
@@ -121,6 +120,11 @@ div.highlighter-rouge {
 
 div#disqus_thread {
   margin: 2em 0;
+}
+
+div.footnotes {
+  margin: 2em auto;
+  border-top: 2px dotted #a6a6a6;
 }
 
 time {
