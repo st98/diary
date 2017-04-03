@@ -90,6 +90,7 @@ blockquote {
 
 blockquote p {
   margin: 0;
+  text-indent: 0;
 }
 
 pre {
