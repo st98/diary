@@ -13,7 +13,7 @@ date: 2017-04-03 14:30:02 +0900
 
 与えられた URL を開いてしばらく待つと、`Who rules this star system?` という文章とともに入力画面が表示されました。
 
-index.html をダウンロードしてみると、どうやらこれは約 1 MB の巨大なファイルのようでした。
+starblind.html をダウンロードしてみると、どうやらこれは約 1 MB の巨大なファイルのようでした。
 
 `<script src="data:text/javascript;base64,..."></script>` という形でスクリプトを読み込んでいるようだったので
 
