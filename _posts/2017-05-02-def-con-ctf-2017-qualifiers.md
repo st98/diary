@@ -144,7 +144,7 @@ Dump of assembler code for function main:
 End of assembler dump.
 ```
 
-`gets` が使われているので簡単に BOF ができるようです。が、`strstr(ユーザ入力, "Smash me outside, how bout dAAAAAAAAAAA")` の返り値が 0 でなければ `exit(0)` が実行されてしまい、せっかくリターンアドレスを書き換えても無意味になってしまいます。
+`gets` が使われているので簡単に BOF ができるようです。が、`strstr(ユーザ入力, "Smash me outside, how bout dAAAAAAAAAAA")` の返り値が 0 であれば `exit(0)` が実行されてしまい、せっかくリターンアドレスを書き換えても無意味になってしまいます。
 
 `strstr` は第一引数から第二引数を探し、見つかればその位置のアドレスを、見つからなければ NULL を返します。ということは入力に `Smash me outside, how bout dAAAAAAAAAAA` を含ませればいいはずです。実際にやってみましょう。
 
@@ -161,7 +161,6 @@ Segmentation fault
 gdb-peda$ pattern_create 64
 'AAA%AAsAABAA$AAnAACAA-AA(AADAA;AA)AAEAAaAA0AAFAAbAA1AAGAAcAA2AAH'
 gdb-peda$ r
-Starting program: /root/ctf/defconquals2017/smashme/smashme
 Welcome to the Dr. Phil Show. Wanna smash?
 Smash me outside, how bout dAAAAAAAAAAAAAA%AAsAABAA$AAnAACAA-AA(AADAA;AA)AAEAAaAA0AAFAAbAA1AAGAAcAA2AAH
 
