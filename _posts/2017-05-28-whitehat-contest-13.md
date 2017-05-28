@@ -184,7 +184,10 @@ print res.decode('hex')
 
 ([solve.py](https://gist.github.com/st98/c5592d0b6e4eda1078df84b3ea13abed))
 
-...
+```
+$ python2 solve.py
+5a62af9a23b56ee49370808a0cf1e8096757257
+```
 
 ```
 WhiteHat{5a62af9a23b56ee49370808a0cf1e80967572570}
