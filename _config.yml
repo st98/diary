@@ -33,3 +33,4 @@ kramdown:
 
 gems:
   - jekyll-feed
+  - jekyll-sitemap
