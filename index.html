@@ -14,5 +14,6 @@ layout: default
 {% for page in site.posts limit:5 %}
 <li>{% for category in page.categories %}[<a href="{{ site.baseurl }}/category.html#{{ category }}" title="{{ category }}">{{ category }}</a>]{% endfor %} <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a> (<time>{{ page.date | date: '%Y-%m-%d' }}</time>)</li>
 {% endfor %}
-{% if site.posts | size > 5 %}<li><a href="{{ site.baseurl }}/archive.html">少し昔の記事を見る</a></li>{% endif %}
+{% assign post_count = site.posts | size %}
+{% if post_count > 5 %}<li><a href="{{ site.baseurl }}/archive.html">少し昔の記事を見る</a></li>{% endif %}
 </ul>
