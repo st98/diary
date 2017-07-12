@@ -1,5 +1,8 @@
 baseurl: /diary
-author: st98
+author:
+  name: st98
+  picture: https://gravatar.com/avatar/b82c89502a3051c3c9f62c82760b1cad?s=256
+  twitter: st98_
 title: st98 の日記帳
 description: st98 の日記帳です。
 production_url: https://st98.github.io
@@ -8,6 +11,9 @@ encoding: utf-8
 
 permalink: /posts/:year-:month-:day-:title.html
 timezone: Asia/Tokyo
+
+feed:
+  path: atom.xml
 
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile']
 
@@ -24,3 +30,6 @@ kramdown:
   auto_ids: true
   hard_wrap: true
   syntax_highlighter: rouge
+
+gems:
+  - jekyll-feed
