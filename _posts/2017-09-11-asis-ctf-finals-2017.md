@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ASIS CTF Finals 2017 に参加しました
+title: ASIS CTF Finals 2017 の write-up
 categories: [ctf]
 date: 2017-09-11 09:00:00 +0900
 ---
