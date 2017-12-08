@@ -5,7 +5,7 @@ categories: [ctf]
 date: 2017-12-07 20:00:00 +0900
 ---
 
-この記事は [Harekaze Advent Calendar 2017](https://adventar.org/calendars/2292) の 7 日目の記事です。
+これは [Harekaze Advent Calendar 2017](https://adventar.org/calendars/2292) の 7 日目の記事です。
 
 ---
 
