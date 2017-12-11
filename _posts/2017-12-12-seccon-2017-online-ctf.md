@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SECCON 2017 Online CTF の write-up
+description: "チーム Bluemermaid で 12 月 9 日から 12 月 10 日にかけて開催された SECCON 2017 Online CTF に参加しました。最終的にチームで 5800 点を獲得し、順位は得点 1028 チーム中 3 位でした。うち、私は 3 問のフラグを通して 1200 点を入れました。"
 categories: [ctf, seccon]
 date: 2017-12-12 06:00:00 +0900
 ---
