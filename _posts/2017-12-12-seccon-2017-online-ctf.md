@@ -481,7 +481,7 @@ admin:d2f37e101c0e76bcc90b5634a5510f64
 
 `d2f37e101c0e76bcc90b5634a5510f64` を Cookie の `remember` にセットしてみると、ログインフォームのユーザ名に `Yes!Kusomon!!` と入力されており、`admin` のパスワードを得ることができました。
 
-早速 `admin` ログインしてみると、`menu.cgi` に遷移して以下のようなページが表示されました。
+早速 `admin` でログインしてみると、`menu.cgi` に遷移して以下のようなページが表示されました。
 
 ```html
 <!DOCTYPE html
@@ -532,7 +532,7 @@ SMTP (25 番ポート) にはローカルからのみアクセスできるよう
 
 その次の `wget --debug -O /dev/stdout 'http://` というボタンの右側にはアドレスを入力できるテキストボックスが表示されています。これに `example.com` を入力してボタンを押すと `http://example.com` の内容が表示されました。どうやらこのアドレスには好きなアドレスを入力することができるようです。
 
-ここでどうすればいいか悩んでいましたが、[@KageShiron](https://twitter.com/kageshiron) さんによって、`https://127.0.0.1 %0D%0AHELO localhost%0D%0AMAIL FROM%3a<email%40example.com>%0D%0aRCPT TO%3aroot%0D%0ADATA%0d%0aSubject %3a give me flag%0d%0a.%0d%0a:25` にリダイレクトさせるページ (HTTP) を用意してアクセスさせることで、メールを送信させることができると分かりました。
+ここでどうすればいいか悩んでいましたが、[@KageShiron](https://twitter.com/kageshiron) さんによって、`https://127.0.0.1 %0D%0AHELO localhost%0D%0AMAIL FROM%3a<email%40example.com>%0D%0aRCPT TO%3aroot%0D%0ADATA%0d%0aSubject %3a give me flag%0d%0a.%0d%0a:25` にリダイレクトするページ (HTTP) を用意してアクセスさせることで、メールを送信させることができると分かりました。
 
 これによって暗号化されたフラグが `37208e07f86ba78a7416ecd535fd874a3b98b964005a5503bcaa41a1c9b42a19` と分かり、`admin` のパスワードを手に入れる際に使った方法で復号ができました。
 
