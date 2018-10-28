@@ -234,7 +234,9 @@ ID:Kana<br />
 FLAG: CRCTF{Two years ago, August 31st.}
 ```
 
-`CRCTF{Two years ago, August 31st.}`
+```
+CRCTF{Two years ago, August 31st.}
+```
 
 ## [Misc 377] Opening Movie
 
