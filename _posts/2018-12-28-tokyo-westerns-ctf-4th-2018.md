@@ -5,7 +5,7 @@ categories: [ctf]
 date: 2018-12-28 04:20:00 +0900
 ---
 
-9 月 1 日から 9 月 3 日にかけて開催された[TokyoWesterns CTF 4th 2018](https://tokyowesterns.github.io/ctf2018/) にチーム Harekaze で参加しました。最終的にチームで 2241 点を獲得し、順位は得点 810 チーム中 10 位でした。うち、私は 9 問を解いて 1191 点を入れました。
+9 月 1 日から 9 月 3 日にかけて開催された[TokyoWesterns CTF 4th 2018](https://tokyowesterns.github.io/ctf2018/) にチーム Harekaze で参加しました。最終的にチームで 2241 点を獲得し、順位は得点 810 チーム中 16 位でした。うち、私は 9 問を解いて 1191 点を入れました。
 
 以下、解いた問題の write-up です。
 
