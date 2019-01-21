@@ -1607,7 +1607,7 @@ file_put_contents('payload.jpg', $payload);
 
 これを実行して出力された JPEG をアップロードすると、最初に投稿されたと思われる画像が表示されました。あとは普通に SQL インジェクションをすればよさそうです。
 
-`union` と `file_load` 関数を使えば好きなファイルを読むことができます。これを利用して、先ほど `/admin.html` を見ようとしたときにブロックをした `mod_waf` の設定を見てみます。`/etc/apache2/mods-enabled/waf.load` は以下のような内容でした。
+`union` と `load_file` 関数を使えば好きなファイルを読むことができます。これを利用して、先ほど `/admin.html` を見ようとしたときにブロックをした `mod_waf` の設定を見てみます。`/etc/apache2/mods-enabled/waf.load` は以下のような内容でした。
 
 ```
 LoadModule waf_module /usr/lib/apache2/modules/mod_waf.so
