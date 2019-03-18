@@ -1,4 +1,4 @@
-@charset 'utf-8';
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400');
 
 body {
@@ -6,7 +6,7 @@ body {
   max-width: 50em;
   margin: 1em auto;
   line-height: 1.8;
-  font-family: 'Source Code Pro', Consolas, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-family: Consolas, 'Source Code Pro', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -98,7 +98,7 @@ pre {
 }
 
 pre, code {
-  font-family: 'Source Code Pro', Consolas, monospace;
+  font-family: Consolas, 'Source Code Pro', monospace;
 }
 
 code, .highlighter-rouge {
