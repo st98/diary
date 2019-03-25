@@ -108,7 +108,11 @@ code, .highlighter-rouge {
 }
 
 code {
-  padding: .2em .5em;
+  padding: .1em .4em;
+}
+
+.highlighter-rouge {
+  border: 1px solid #eee;
 }
 
 div.highlighter-rouge {
