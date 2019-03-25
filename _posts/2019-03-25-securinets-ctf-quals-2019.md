@@ -7,7 +7,13 @@ date: 2019-03-25 07:00:00 +0900
 
 3 月 24 日から 3 月 25 日にかけて開催された [Securinets CTF Quals 2019](https://www.facebook.com/Securinets/) に、チーム [zer0pts](https://ctftime.org/team/54599) で参加しました。最終的にチームで 23395 点を獲得し、順位は得点 436 チーム中 2 位でした。うち、私は 10 問を解いて 9605 点を入れました。
 
-以下、解いた問題の write-up です。
+他のメンバーの write-up はこちら。
+
+- [Securinets CTF Quals 2019 Writeup - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2019/03/25/152043)
+- [Securinets CTF Quals 2019 writeup - yoshikingのがんばる日記](https://yoshiking.hatenablog.jp/entry/2019/03/25/165855)
+- [Securinets Prequals 2K19 writeup - ふるつき](https://furutsuki.hatenablog.com/entry/2019/03/25/214238)
+
+以下、私が解いた問題の write-up です。
 
 ## Web
 ### Feedback (731)
