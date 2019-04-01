@@ -1,7 +1,7 @@
 ---
 layout: post
 title: April Fools' GTF 2017 の write-up
-categories: [ctf]
+categories: [gtf]
 date: 2017-04-03 14:30:00 +0900
 ---
 
