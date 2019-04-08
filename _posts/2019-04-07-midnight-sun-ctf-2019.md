@@ -308,7 +308,7 @@ class Image {
 
 `upload.php` は PNG か JPEG、SVG のいずれかでなければファイルのアップロードを拒否しますが、Phar ファイルのヘッダはある程度自由なので PNG 等との polyglot を作ることもできます。
 
-まず Phar と PNG の polyglot を作るスクリプトを書きます。
+まず Phar と JPEG の polyglot を作るスクリプトを書きます。
 
 ```php
 <?php
