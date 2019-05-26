@@ -7,6 +7,12 @@ date: 2019-05-26 15:00:00 +0900
 
 5 月 25 日から 5 月 26 日にかけて開催された [Beginners CTF 2019](https://2018.seccon.jp/2019/05/2nd-seccon-beginners-ctf.html) に、チーム zer0pts として参加しました。最終的にチームで 5477 点を獲得し、順位は得点 666 チーム中 1 位でした。うち、私は 9 問を解いて 2295 点を入れました。
 
+他のメンバーの write-up はこちら。
+
+- [SECCON Beginners CTF 2019 writeup - ふるつき](https://furutsuki.hatenablog.com/entry/2019/05/26/150813)
+- [SECCON Beginners CTF 2019のWriteup - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2019/05/26/150937)
+- [SECCON Beginners CTF 2019 Writeup - yoshikingのがんばる日記](https://yoshiking.hatenablog.jp/entry/2019/05/26/150805)
+
 以下、私が解いた問題の write-up です。
 
 ## Misc
