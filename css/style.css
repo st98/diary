@@ -150,6 +150,17 @@ pre.highlight {
   border-top: 2px dotted #a6a6a6;
 }
 
+.anchor {
+  visibility: hidden;
+}
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor {
+  visibility: visible;
+}
+
 time {
   color: #888;
 }

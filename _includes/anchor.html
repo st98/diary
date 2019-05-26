@@ -1,0 +1,16 @@
+<script>
+(function () {
+  var headings = document.querySelectorAll('h1,h2,h3,h4');
+  for (var i = 0; i < headings.length; i++) {
+    var e = headings[i];
+    if (e.id) {
+      var link = document.createElement('a');
+      link.classList.add('anchor');
+      link.href = '#' + e.id;
+      e.appendChild(document.createTextNode(' '));
+      link.appendChild(document.createTextNode('\u00b6'));
+      e.appendChild(link);
+    }
+  }
+})();
+</script>
