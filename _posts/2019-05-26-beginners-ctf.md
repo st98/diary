@@ -650,7 +650,7 @@ cdnjs.cloudflare.com: cdnjs.cloudflare.com is known to host Angular libraries wh
 
 `cdnjs.cloudflare.com` は [AngularJS](https://angularjs.org/) をホストしており、このため CSP をバイパスできてしまうようです。どういうことでしょうか。
 
-`angular csp bypass` 等のキーワードでググってみると、[H5SC Minichallenge 3](https://github.com/cure53/XSSChallengeWiki/wiki/H5SC-Minichallenge-3:-%22Sh*t,-it's-CSP!%22) の記事がヒットしました。[191 バイトの解法](https://github.com/cure53/XSSChallengeWiki/wiki/H5SC-Minichallenge-3:-%22Sh*t,-it's-CSP!%22#191-bytes)の、AngularJS と [Prototype](http://prototypejs.org/) をあわせてロードし、`Function.prototype.curry` を読んだ結果からグローバルオブジェクトを手に入れるという手法を利用しましょう。
+`angular csp bypass` 等のキーワードでググってみると、[H5SC Minichallenge 3](https://github.com/cure53/XSSChallengeWiki/wiki/H5SC-Minichallenge-3:-%22Sh*t,-it's-CSP!%22) の記事がヒットしました。[191 バイトの解法](https://github.com/cure53/XSSChallengeWiki/wiki/H5SC-Minichallenge-3:-%22Sh*t,-it's-CSP!%22#191-bytes)の、AngularJS と [Prototype](http://prototypejs.org/) をあわせてロードし、`Function.prototype.curry` を呼んだ結果からグローバルオブジェクトを手に入れるという手法を利用しましょう。
 
 以下のような内容で意見を投稿します。
 
