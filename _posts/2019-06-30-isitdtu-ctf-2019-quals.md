@@ -11,6 +11,7 @@ date: 2019-06-30 23:00:00 +0900
 
 - [ISITDTU CTF 2019 Quals Writeup - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2019/06/30/215929)
 - [ISITDTU CTF 2019 Quals Writeup - ふるつき](https://furutsuki.hatenablog.com/entry/2019/06/30/224649)
+- [ISITDTU CTF 2019 Quals Writeup - pomoの掃きだめ](https://pomo-mhskmq.hatenablog.com/entry/2019/07/01/012545)
 
 以下、私が解いた問題の write-up です。
 
