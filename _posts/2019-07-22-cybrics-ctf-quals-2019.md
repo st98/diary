@@ -10,6 +10,7 @@ date: 2019-07-22 07:00:00 +0900
 他のメンバーの write-up はこちら。
 
 - [CyBRICS CTF 2019 Writeup - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2019/07/21/212133)
+- [CyBRICS CTF Quals 2019 Writeup - yoshikingのがんばる日記](https://yoshiking.hatenablog.jp/entry/2019/07/22/183332)
 
 以下、私が解いた問題の writeup です。
 
