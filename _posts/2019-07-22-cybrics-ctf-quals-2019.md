@@ -15,7 +15,7 @@ date: 2019-07-22 07:00:00 +0900
 以下、私が解いた問題の writeup です。
 
 ## Web
-## Warmup (10)
+### Warmup (10)
 > E_TOO_EASY
 > 
 > Just get the flag (問題サーバへのリンク)
