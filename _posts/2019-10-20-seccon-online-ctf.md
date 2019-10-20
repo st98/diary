@@ -912,7 +912,7 @@ async fetchContest(contestId) {
 
 > 15:10 &lt;bluepichu&gt; bhik: http://spa.chal.seccon.jp:18364/#/<your-domain-here>/lol?callback=?&x=
 
-`callback=?` という GET パラメータを付与すれば何かできるようです。どういうことが、jQuery のドキュメントを参照しましょう。
+`callback=?` という GET パラメータを付与すれば何かできるようです。どういうことか、jQuery のドキュメントを確認しましょう。
 
 > If the URL includes the string "callback=?" (or similar, as defined by the server-side API), the request is treated as JSONP instead.
 > 
