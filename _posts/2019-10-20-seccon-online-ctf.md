@@ -11,6 +11,7 @@ date: 2019-10-20 18:00:00 +0900
 
 - [SECCON 2019 Online CTF Writeup - /var/log/hikalium](https://hikalium.hatenablog.jp/entry/2019/10/20/154511)
 - [writeups/secconctf/2019 at master · hnoson/writeups](https://github.com/hnoson/writeups/tree/master/secconctf/2019)
+- [SECCON Quals 2019 Writeup - yoshikingのがんばる日記](https://yoshiking.hatenablog.jp/entry/2019/10/21/010843)
 
 以下、私が解いた問題の writeup です。
 
