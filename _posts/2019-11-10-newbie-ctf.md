@@ -7,6 +7,10 @@ date: 2019-11-10 00:00:00 +0900
 
 11 月 2 日から 11 月 3 日にかけて開催された [Newbie CTF](https://nctf.vulnerable.kr/) に、チーム zer0pts として参加しました。最終的にチームで 15849 点を獲得し、順位は得点 565 チーム中 1 位でした。うち、私は 7 問を解いて 5388 点を入れました。
 
+他のメンバーの write-up はこちら。
+
+- [Newbie CTF 2019 Writeup - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2019/11/11/102219)
+
 以下、私が解いた問題の write-up です。
 
 ## Webhacking
