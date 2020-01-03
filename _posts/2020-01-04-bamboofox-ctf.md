@@ -194,7 +194,7 @@ if ((isset($_POST['😂']) and isset($_POST['🤣']) and isset($_GET['KEY'])) or
 
 - `srand(20191231 + 20200101 + time());` と、`rand` については乱数シードが推測可能 (`random_int(1,128)` は推測不可能)
 - `$final` の各文字については、`rand() ^ $array2[rand() % count($array2)]` は `rand()` の返り値が推測できるのでわかり、`$array3[rand() % count($array3)] * random_int(1,128))` も `$array3` は `str_split($_GET['KEY'], 1)` とユーザ入力由来なので null 文字を入力すれば OK。これで元の文字が推測可能
-- `$_POST['​😂'] == md5($_POST['🤣​'])` では PHP の `0 == '0e123'` となる仕様を使って、いわゆる Magic Hash が使える (なお、最初の `isset($_POST['😂'])` と `isset($_POST['🤣'])` ではそれぞれ U+1F602 と U+1F923 のみなのに対して、ここではそれぞれ U+200B が前、U+DD23 が後ろについていることに注意)
+- `$_POST['​😂'] == md5($_POST['🤣​'])` では PHP の `'0' == '0e123'` となる仕様を使って、いわゆる Magic Hash が使える (なお、最初の `isset($_POST['😂'])` と `isset($_POST['🤣'])` ではそれぞれ U+1F602 と U+1F923 のみなのに対して、ここではそれぞれ U+200B が前、U+DD23 が後ろについていることに注意)
 
 という点さえわかれば `$final` の元の文字列が復元できます。
 
