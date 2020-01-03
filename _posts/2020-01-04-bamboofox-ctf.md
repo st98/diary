@@ -233,6 +233,10 @@ string(35) "BAMBOOFOX{WHY_THERE_ARE_UNICODE_LA}"
 
 フラグが得られました。
 
+```
+BAMBOOFOX{WHY_THERE_ARE_UNICODE_LA}
+```
+
 ## [Misc 122] Find the Cat (73 solves)
 > The cat is hiding somewhere. Where is the cat?
 > 
