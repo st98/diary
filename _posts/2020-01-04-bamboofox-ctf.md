@@ -271,7 +271,7 @@ scanned 1 barcode symbols from 1 images
 
 ```
 $ strings Xrv86y2.jpg
-…z$6C93L7FuaEBAMBOOFOX{{d3d13151dv65d2d1cvc}BAMBOOFOX{,iu,}}A@vpZS0T$vuAkC9w@IUk^J9zoD8*RIyA*e@C9Hj0*q…
+…BAMBOOFOX{,iu,}}A@vpZS0T$vuAkC9w@IUk^J9zoD8*RIyA*e@C9Hj0*q…
 ```
 
 フラグっぽい文字列が含まれていますが、形式としては正しくありません。フラグとして正しい文字列 (`BAMBOO{[^}]+}`) を探すとフラグが得られました。
