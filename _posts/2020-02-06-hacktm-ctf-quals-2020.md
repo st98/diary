@@ -7,6 +7,10 @@ date: 2020-02-06 09:00:00 +0900
 
 2 月 1 日から 2 月 3 日にかけて開催された [HackTM CTF Quals 2020](https://ctf.hacktm.ro/) に、チーム zer0pts として参加しました。最終的にチームで 6782 点を獲得し、順位は 1 点以上得点した 747 チーム中 8 位でした。うち、私は 7 問を解いて 2213 点を入れました。
 
+他のメンバーの write-up はこちら。
+
+- [HackTM CTF Quals 2020 Writeup - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2020/02/06/130551)
+
 以下、私が解いた問題の write-up です。
 
 ## [forensics 144] Strange PCAP (89 solves)
