@@ -7,6 +7,10 @@ date: 2020-03-15 20:00:00 +0900
 
 3 月 14 日から 3 月 15 日にかけて開催された [CONFidence CTF 2020 Teaser](https://confidence2020.p4.team/) に、チーム zer0pts として参加しました。最終的にチームで 786 点を獲得し、順位は 9 点以上得点した 354 チーム中 19 位でした。うち、私は 2 問を解いて 319 点を入れました。
 
+他のメンバーの write-up はこちら。
+
+- [CONFidence CTF 2020 Teaser Writeups - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2020/03/15/205402)
+
 以下、私が解いた問題の write-up です。
 
 ## [Web 157] Cat web (24 solves)
