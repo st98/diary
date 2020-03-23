@@ -7,6 +7,10 @@ date: 2020-03-23 14:00:00 +0900
 
 3 月 22 日から 3 月 23 日にかけて開催された [FireShell CTF 2020](https://2020.angstromctf.com/) に、チーム zer0pts として参加しました。最終的にチームで 7637 点を獲得し、順位は 100 点以上得点した 308 チーム中 3 位でした。うち、私は 8 問を解いて 3472 点を入れました。
 
+他のメンバーの write-up はこちら。
+
+- [FireShell CTF 2020 Writeups - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2020/03/23/105837)
+
 以下、私が解いた問題の write-up です。
 
 ## [web 100] Caas (170 solves)
