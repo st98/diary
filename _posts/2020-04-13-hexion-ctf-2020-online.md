@@ -306,7 +306,7 @@ undefined8 FUN_001019f3(int iParm1,char **ppcParm2)
 }
 ```
 
-`gethostbyname` が失敗すればフラグが表示されるようです。必ず失敗するような `gethostbyname` がある共有ライブラリを用意して、`LD_PRELOAD` を使って呼び出される `gethostbyname` をこれに置き換えてみましょう。
+`gethostbyname` が成功すればフラグが表示されるようです。必ず NULL でない値を返すような `gethostbyname` がある共有ライブラリを用意して、`LD_PRELOAD` を使って呼び出される `gethostbyname` をこれに置き換えてみましょう。
 
 ```
 wannasmile@1de660fa6809:/tmp/qwjodiwqjdoi$ cat evil.c
