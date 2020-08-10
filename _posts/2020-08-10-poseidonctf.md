@@ -10,10 +10,11 @@ date: 2020-08-10 10:00:00 +0900
 他のメンバーが書いた write-up はこちら。
 
 - [Poseidon CTF Writeup - yoshikingのがんばる日記](https://yoshiking.hatenablog.jp/entry/2020/08/10/030427)
+- [PoseidonCTF 1st Edition Writeup - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2020/08/10/123132)
 
 以下、私の write-up です。
 
-## [Misc 100] DISC ORDer (? solves)
+## [Misc 100] DISC ORDer (314 solves)
 > As usual , Discord flag
 
 この CTF の公式 Discord サーバに入ると、`#general` チャンネルのトピックが `Poseidon{L3t_Th3_FuN_B3giN}` に設定されていました。
@@ -22,7 +23,7 @@ date: 2020-08-10 10:00:00 +0900
 Poseidon{L3t_Th3_FuN_B3giN}
 ```
 
-## [Misc 100] Young Blaze (? solves)
+## [Misc 100] Young Blaze (125 solves)
 > I was online chillin  
 > I seen a fine chick  
 > She was summertime fine  
@@ -83,7 +84,7 @@ $ python2
 Poseidon{L1nK_tH4T_$h17_im_0u7}
 ```
 
-## [Foren 100] sh*tty ransomware PT2 (? solves)
+## [Foren 100] sh*tty ransomware PT2 (78 solves)
 > One last thing , on my the encrypted files , my brother has a secret on it , can you reveal it for us please ?
 
 `PT2` という部分からわかるように、この問題は `sh*tty ransomware` という問題の続きでした。
@@ -102,7 +103,7 @@ Poseidon{L1nK_tH4T_$h17_im_0u7}
 Poseidon{KasPersK3y_1s_H1r1ngxDD!!}
 ```
 
-## [Foren 100] Gallery (? solves)
+## [Foren 100] Gallery (52 solves)
 > i have an old damaged disk , it contains a lot of my images , i use it as a gallery actually , in it , i had a secret can you get it back for me ?
 > 
 > 添付ファイル: challenge.E01
@@ -171,7 +172,7 @@ Poseidon{uR3_4_G00D_AN4Ly5t}
 Poseidon{uR3_4_G00D_AN4Ly5t}
 ```
 
-## [Misc 100] Search ! (? solves)
+## [Misc 100] Search ! (67 solves)
 > Hello , it's iwd , i'm hiding a flag on one of my accounts ,  
 > can you find it for me ?
 > 
@@ -197,7 +198,7 @@ YouTube チャンネルのページについて調べていると、メールア
 Posedion{U_Sh0uld_D1g_B3tt3r}@gmail.com
 ```
 
-## [Web 988] Interview (? solves)
+## [Web 988] Interview (7 solves)
 > Exploring the streets and asking tunisians people some questions that some are stupid and some are not. However, what if you were that person at that specific moment.
 > 
 > NOTE: FLAG IS AT '/flag'
@@ -305,7 +306,7 @@ Poseidon{El_SuuuuuuuuubC0ns13NT_P0su7uv3}
 
 ほか、私がフラグを提出したわけではないものの面白かった問題や、解いた後に消えてしまった問題の write-up です。
 
-## [Web 930] Old Rick (? solves)
+## [Web 930] Old Rick (15 solves)
 > Morty was hearing a sound from the garage, following it he found himself facing a little pickle on the table. Suprisingly, Rick turned himself into a pickle and now he needs help to get back to a human.
 > 
 > (URL)
