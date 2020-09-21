@@ -7,6 +7,10 @@ date: 2020-09-21 15:50:00 +0900
 
 9 月 21 日に 1 時間 15 分だけ開催された [TSG LIVE! CTF](https://live-ctf.tsg.ne.jp/) に、チーム yoshikingdom の ptr-yoda として参加しました。最終的にチームで 1150 点を獲得し、順位は 1 位でした。うち、私は 2 問を解いて 350 点を入れました。
 
+他のメンバーが書いた write-up はこちら。
+
+- [TSG LIVE! CTF 5のwriteup - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2020/09/21/162305)
+
 以下、私の write-up です。
 
 ## [Web 200] WAF
