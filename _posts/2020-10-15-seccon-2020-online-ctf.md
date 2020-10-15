@@ -94,7 +94,7 @@ $ python2
 <built-in function eval>
 ```
 
-`eval` にアクセスすることができました。これを使って `eval(raw_input())` のことができないか試してみましょう。
+`eval` にアクセスすることができました。これを使って `eval(raw_input())` 相当のことができないか試してみましょう。
 
 ```
 $ python2 run.bde1c4a3e543e63ff3c7f3d5e93bf075.py
