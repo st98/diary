@@ -10,6 +10,7 @@ date: 2021-03-22 12:00:00 +0900
 他のメンバーが書いた writeup はこちら。
 
 - [Securinets CTF 2021 Quals writeup - ふるつき](https://furutsuki.hatenablog.com/entry/2021/03/22/102747)
+- [Securinets CTF 2021 Writeups - CTFするぞ](https://ptr-yudai.hatenablog.com/entry/2021/03/22/141505)
 
 以下、私の writeup です。
 
