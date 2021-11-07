@@ -541,7 +541,7 @@ echo "functions: " . get_diff('disable_functions.txt', get_defined_functions()['
 echo "classes: " . get_diff('disable_classes.txt', get_declared_classes());
 ```
 
-実行します。問題サーバで使われている PHP のバージョンは 7.2.34 ですからFFI 関連のクラスはないでしょうが、有用そうな関数やクラスがいくつかあります。
+実行します。問題サーバで使われている PHP のバージョンは 7.2.34 ですから FFI 関連のクラスはないでしょうが、有用そうな関数やクラスがいくつかあります。
 
 ```
 $ php check.php 
