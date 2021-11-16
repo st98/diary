@@ -11,7 +11,9 @@ date: 2021-11-07 13:00:00 +0900
 
 1 位は 4032 点を獲得した ./Vespiary、2 位は 3685 点を獲得した Black Bauhinia、3 位は 2902 点を獲得した Thehackerscrew でした。おめでとうございます🎉
 
-競技時間中に解かれなかった [s1r1us](https://twitter.com/S1r1u5_) さん作問の neutron, bettercatalog の 2 問については、それぞれ最初に解いた方に 50 ドルの賞金が与えられるそうなのでぜひ挑んでみてください。
+[zer0pts/bsides-ahmedabad-ctf-2021](https://gitlab.com/zer0pts/bsides-ahmedabad-ctf-2021) で問題のソースコードなどが公開されていますので、問題に挑戦してみたいとか、リベンジを果たしたいといった方はぜひ遊んでみてください。
+
+~~競技時間中に解かれなかった [s1r1us](https://twitter.com/S1r1u5_) さん作問の neutron, bettercatalog の 2 問については、それぞれ最初に解いた方に 50 ドルの賞金が与えられるそうなのでぜひ挑んでみてください。~~ → どちらも解かれたそうです。すごい。[s1r1us さんによる writeup](https://blog.s1r1us.ninja/CTF/bsidesahm2021) も公開されているので、ぜひ読んでみてください。
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The CTF is over, Neutron(ElectronJS) and bettercatalog(1day XS-leak) are still unsolved.<br><br>So, we are extending challenges for a week. Get the first blood and submit the writeup, and you will get a chance to win $50/each. <br><br>More details about the challenges:<a href="https://t.co/m5cSwA8EQS">https://t.co/m5cSwA8EQS</a> <a href="https://t.co/nNLe3veITB">https://t.co/nNLe3veITB</a> <a href="https://t.co/WcK8tes8P9">pic.twitter.com/WcK8tes8P9</a></p>&mdash; s1r1us (@S1r1u5_) <a href="https://twitter.com/S1r1u5_/status/1457193204655157251?ref_src=twsrc%5Etfw">November 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
