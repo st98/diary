@@ -17,12 +17,12 @@ date: 2021-12-25 00:00:00 +0900
 
 ---
 
-さて、この記事では私が出題した以下の7問について解説します。
+さて、この記事では私が出題した以下の4問について解説します。
 
-- [[Web 201] Incomplete Blog](#web-201-incomplete-blog-21-solves)
-- [[Web 322] Osoraku Secure Note](#web-322-osoraku-secure-note-7-solves)
-- [[Web 500] Emoji Tsukuru](#web-500-emoji-tsukuru-1-solves)
-- [[Rev 365] Let's read wasm](#rev-365-lets-read-wasm-5-solves)
+- [[Web 201] Incomplete Blog (21 solves)](#web-201-incomplete-blog-21-solves)
+- [[Web 322] Osoraku Secure Note (7 solves)](#web-322-osoraku-secure-note-7-solves)
+- [[Web 500] Emoji Tsukuru (1 solves)](#web-500-emoji-tsukuru-1-solves)
+- [[Rev 365] Let's read wasm (5 solves)](#rev-365-lets-read-wasm-5-solves)
 
 ## [Web 201] Incomplete Blog (21 solves)
 > JavaScriptでブログを作ってみました。
